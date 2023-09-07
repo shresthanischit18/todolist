@@ -5,31 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List In JavaScript</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500">
-    <div class="container">
-      <header>
-        <div class="header">
-          <h2 class="text-3xl font-mono text-lg text-gray-800 text-center p-6">To-Do List</h2>
-        </div>
-        <div class="new-todo">
-          <form id="todoform" class="flex item-center justify-center gap-5 p-6">
-            <input type="text" name="newtodo" id="newtodo" placeholder="I will do ..." class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary bg-white"/>
-            <button type="submit" >
-            <button type="submit" class="relative z-[2] rounded-r border-2 border-primary px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-white hover:bg-opacity-15 focus:outline-none focus:ring-0">
-              Add
-            </button>
-        </div>
-      </header>
-      <div id="todos-list" class="bg-white bg-opacity-15 p-2 ">
-      
-      </div>
-      <div class="notification"></div>
+  <body class="w-full">
+    <div class="header">
+      <h1 class="text-center p-8 text-3xl font-semibold">To-Do List</h1>
     </div>
+    <div class="new-todo">
+      <form
+        id="todoform"
+        class="flex item-center justify-center gap-5 p-6 m-auto"
+      >
+        <input
+          type="text"
+          name="newtodo"
+          id="newtodo"
+          class="border border-black w-[30rem] rounded-[4px] pl-2 h-[2.5rem]"
+          placeholder="I will do ..."
+        />
+        <button
+          type="submit"
+          class="w-[6rem] rounded-[4px] bg-blue-500 text-white hover:bg-blue-700"
+        >
+          Add
+        </button>
+      </form>
+    </div>
+    <div
+      id="todos-list"
+      class="w-[55%] m-auto bg-opacity-15 p-4 overflow-scroll h-[100vh]"
+    ></div>
 
-    <script src="main.js"></script>
+    <div class="notification"></div>
   </body>
+  <script src="main.js"></script>
 </html>

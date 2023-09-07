@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+  }
+  
+  html {
+    width: 100%;
+    overflow: hidden;
+  }
   
   #todos-list .todo {
     display: flex;
@@ -6,14 +16,19 @@
     border-radius: 5px;
   }
   #todos-list .todo:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.063);
   }
+  
+  #todos-list .todo:checked {
+    background: orange;
+  }
+  
   #todos-list .todo * {
     cursor: pointer;
     margin-right: 0.5rem;
   }
   #todos-list .todo i {
-    font-size: 0.9rem;
+    font-size: 13px;
   }
   #todos-list .todo p {
     flex: 1;
@@ -21,32 +36,20 @@
   }
   .checked {
     text-decoration: line-through;
-    color: grey;
+    color: black;
   }
-  
   
   .notification {
     position: absolute;
-  
-    width: calc(3 * var(--contaier-width) / 4);
-    height: 60px;
-  
+    background: #3b82f6;
+    padding: 12px;
+    color: white;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
-  
-    opacity: 0.9;
-  
-    border-radius: 8px;
-    background-color: rgb(233, 81, 81);
     top: 10px;
-    right: calc(-3 * var(--contaier-width) / 4);
-  
-    color: #fff;
-  
+    display: none;
     transition: 300ms right ease-in-out;
   }
   
-  .notif-enter {
-    right: 10px;
-  }
