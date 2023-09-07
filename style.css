@@ -1,0 +1,52 @@
+  
+  #todos-list .todo {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0.5rem;
+    border-radius: 5px;
+  }
+  #todos-list .todo:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  #todos-list .todo * {
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  #todos-list .todo i {
+    font-size: 0.9rem;
+  }
+  #todos-list .todo p {
+    flex: 1;
+    word-break: break-all;
+  }
+  .checked {
+    text-decoration: line-through;
+    color: grey;
+  }
+  
+  
+  .notification {
+    position: absolute;
+  
+    width: calc(3 * var(--contaier-width) / 4);
+    height: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    opacity: 0.9;
+  
+    border-radius: 8px;
+    background-color: rgb(233, 81, 81);
+    top: 10px;
+    right: calc(-3 * var(--contaier-width) / 4);
+  
+    color: #fff;
+  
+    transition: 300ms right ease-in-out;
+  }
+  
+  .notif-enter {
+    right: 10px;
+  }
